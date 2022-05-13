@@ -8,14 +8,15 @@ datasource db {
 }
 
 model Account {
-  id        Int      @id @default(autoincrement())
-  nickname  String   @unique
+  id        Int       @id @default(autoincrement())
+  nickname  String    @unique
   birth     DateTime
-  email     String   @unique
+  email     String    @unique
   gender    Gender
   password  String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
 }
 
 enum Gender {

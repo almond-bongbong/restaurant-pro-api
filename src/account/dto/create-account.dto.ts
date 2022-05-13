@@ -1,11 +1,13 @@
-import { Field, ObjectType } from '@nestjs/graphql';
+import { Field, InputType } from '@nestjs/graphql';
 import { Gender } from '@prisma/client';
-import BaseDTO from 'src/common/base.dto';
 
-@ObjectType()
-export default class AccountDTO extends BaseDTO {
+@InputType()
+export class CreateAccountInput {
   @Field(() => String)
   email: string;
+
+  @Field(() => String)
+  password: string;
 
   @Field(() => String)
   nickname: string;

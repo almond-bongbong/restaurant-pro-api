@@ -10,4 +10,7 @@ export default class BaseDTO {
 
   @Field(() => Date)
   updatedAt: Date;
+
+  @Field(() => Date)
+  deletedAt: Date;
 }
