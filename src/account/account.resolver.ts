@@ -16,7 +16,7 @@ export class AccountResolver {
   }
 
   @Mutation(() => AccountDTO)
-  async createAccount(@Args('input') createAccountInput: CreateAccountInput) {
+  createAccount(@Args('input') createAccountInput: CreateAccountInput) {
     return this.accountService.createAccount(createAccountInput);
   }
 }
